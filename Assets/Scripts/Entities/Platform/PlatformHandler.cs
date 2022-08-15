@@ -3,6 +3,8 @@ using GameGuruCaseTwo.Datas.GameData;
 using GameGuruCaseTwo.Datas.AssetData;
 using GameGuruCaseTwo.Systems.EventSystem;
 using GameGuruCaseTwo.Entities.SliceSystem;
+using GameGuruCaseTwo.Systems.ComboSystem;
+using Zenject;
 
 namespace GameGuruCaseTwo.Entities.Platform
 {
@@ -11,22 +13,20 @@ namespace GameGuruCaseTwo.Entities.Platform
         public PlatformSegment CurrentSegment { get; private set; }
         public PlatformSegment PreviousSegment { get; private set; }
 
+        [Inject]
         private readonly PlayReferences _playReferences;
+        [Inject]
         private readonly GameSettings _gameSettings;
+        [Inject]
         private readonly GameAssets _gameAssets;
+        [Inject]
         private readonly EventManager _eventManager;
+        [Inject]
         private readonly PlatformSegmentSlicer _segmentSlicer;
+        [Inject]
+        private readonly SegmentComboManager _comboManager;
 
         private Vector3 _firstSegmentPos;
-
-        public PlatformHandler(PlayReferences references, GameSettings gameSettings, EventManager eventManager, GameAssets gameAssets, PlatformSegmentSlicer segmentSlicer)
-        {
-            _playReferences = references;
-            _gameSettings = gameSettings;
-            _eventManager = eventManager;
-            _gameAssets = gameAssets;
-            _segmentSlicer = segmentSlicer;
-        }
 
         public void Init()
         {
@@ -48,7 +48,7 @@ namespace GameGuruCaseTwo.Entities.Platform
 
             CurrentSegment.StopMoving();
 
-            //_comboHandler.CheckPlacementSuccess(PreviousSegment, CurrentSegment);
+            _comboManager.CheckPlacementSuccess(PreviousSegment, CurrentSegment);
 
             bool successed = _segmentSlicer.SliceSegment(PreviousSegment.SegmentRenderer, CurrentSegment.SegmentRenderer);
 

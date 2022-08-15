@@ -7,5 +7,6 @@ namespace GameGuruCaseTwo.Datas.GameData
     {
         [field:SerializeField] public float FirstSegmentDistanceFromPlatform { get; private set; }
         [field:SerializeField] public float DistanceBtwSegments { get; private set; }
+        [field:SerializeField] public float ComboTolerance { get; private set; }
     }
 }
