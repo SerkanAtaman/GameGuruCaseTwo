@@ -6,7 +6,12 @@ namespace GameGuruCaseTwo.Systems.EventSystem
     {
         public UnityEvent OnPlayButtonPressed;
 
+        public UnityEvent OnLevelFailed;
+        public UnityEvent OnLevelCompleted;
+        public UnityEvent OnNextLevelStarted;
+
         public UnityEvent OnInputReceived;
+        public UnityEvent OnPodiumDanceEnded;
 
         public UnityEvent<bool> OnPlatformSegmentPlaced;
 
@@ -14,6 +19,10 @@ namespace GameGuruCaseTwo.Systems.EventSystem
         {
             OnPlayButtonPressed = new UnityEvent();
             OnInputReceived = new UnityEvent();
+            OnLevelFailed = new UnityEvent();
+            OnLevelCompleted = new UnityEvent();
+            OnNextLevelStarted = new UnityEvent();
+            OnPodiumDanceEnded = new UnityEvent();
             OnPlatformSegmentPlaced = new UnityEvent<bool>();
         }
     }
