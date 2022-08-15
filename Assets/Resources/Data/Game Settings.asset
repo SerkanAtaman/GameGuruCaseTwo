@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Game Settings
   m_EditorClassIdentifier: 
   <FirstSegmentDistanceFromPlatform>k__BackingField: 8
+  <DistanceBtwSegments>k__BackingField: 3
+  <ComboTolerance>k__BackingField: 0.2
