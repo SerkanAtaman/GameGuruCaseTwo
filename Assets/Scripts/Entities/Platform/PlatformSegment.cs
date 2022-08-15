@@ -48,8 +48,6 @@ namespace GameGuruCaseTwo.Entities.Platform
         {
             _segmentObject = segmentObject;
             _segmentObject.localScale = new Vector3(scaleX, _segmentObject.localScale.y, _segmentObject.localScale.z);
-
-            SegmentRenderer.material = assets.GetRandomSegmentMat();
         }
 
         public PlatformSegment(Vector3 position, float scaleX, GameAssets assets)

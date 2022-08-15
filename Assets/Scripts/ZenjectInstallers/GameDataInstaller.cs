@@ -2,6 +2,7 @@ using UnityEngine;
 using Zenject;
 using GameGuruCaseTwo.Datas.AssetData;
 using GameGuruCaseTwo.Datas.GameData;
+using GameGuruCaseTwo.Datas.PlayerData;
 
 namespace GameGuruCaseTwo.ZenjectInstallers
 {
@@ -10,11 +11,13 @@ namespace GameGuruCaseTwo.ZenjectInstallers
     {
         [SerializeField] private GameAssets _gameAssets;
         [SerializeField] private GameSettings _gameSettings;
+        [SerializeField] private PlayerSettings _playerSettings;
 
         public override void InstallBindings()
         {
             Container.BindInstance(_gameAssets);
             Container.BindInstance(_gameSettings);
+            Container.BindInstance(_playerSettings);
         }
     }
 }

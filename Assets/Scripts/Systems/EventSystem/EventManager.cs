@@ -8,10 +8,13 @@ namespace GameGuruCaseTwo.Systems.EventSystem
 
         public UnityEvent OnInputReceived;
 
+        public UnityEvent<bool> OnPlatformSegmentPlaced;
+
         public EventManager()
         {
             OnPlayButtonPressed = new UnityEvent();
             OnInputReceived = new UnityEvent();
+            OnPlatformSegmentPlaced = new UnityEvent<bool>();
         }
     }
 }
