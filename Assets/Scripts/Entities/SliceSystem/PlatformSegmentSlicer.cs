@@ -13,7 +13,7 @@ namespace GameGuruCaseTwo.Entities.SliceSystem
         public PlatformSegmentSlicer(GameAssets assets)
         {
             _gameAssets = assets;
-            _platformableLayer = LayerMask.GetMask(new string[] { "Platformable" });
+            _platformableLayer = LayerMask.GetMask(new string[] { "Segment" });
         }
 
         public bool SliceSegment(MeshRenderer previousSegment, MeshRenderer segmentToCut)
