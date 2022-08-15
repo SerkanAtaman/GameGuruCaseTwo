@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <PlatformSegmentRuinPref>k__BackingField: {fileID: 3309714796544230293, guid: 45de9579b3569384d94183bd9b9aa627, type: 3}
   <PlatformSegmentPref>k__BackingField: {fileID: 8056804989927560764, guid: 8d2f52d45178221428678574b7484612, type: 3}
-  <LevelFinisherPref>k__BackingField: {fileID: 0}
+  <LevelFinisherPref>k__BackingField: {fileID: 8822058165888743613, guid: 50d59dd24e8b8264b890d8c1d9709931, type: 3}
   <PianoSoundClip>k__BackingField: {fileID: 8300000, guid: 40c606bd782cf404ca50ef1dacb4d24d, type: 3}
   <PlatformSegmentMaterials>k__BackingField:
   - {fileID: 2100000, guid: d1e7205df0c8b0142bf4385f4199ab2c, type: 2}

@@ -40,5 +40,10 @@ namespace GameGuruCaseTwo.Systems.ComboSystem
 
             _audioManager.PlayPianoSource(CurrentCombo);
         }
+
+        public void ResetCombo()
+        {
+            CurrentCombo = 0;
+        }
     }
 }

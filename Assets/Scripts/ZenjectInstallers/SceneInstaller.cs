@@ -6,6 +6,7 @@ using GameGuruCaseTwo.Entities.Platform;
 using GameGuruCaseTwo.Systems.GameSystem;
 using GameGuruCaseTwo.Systems.AudioSystem;
 using GameGuruCaseTwo.Systems.ComboSystem;
+using GameGuruCaseTwo.Systems.LevelSystem;
 
 namespace GameGuruCaseTwo.ZenjectInstallers
 {
@@ -23,6 +24,7 @@ namespace GameGuruCaseTwo.ZenjectInstallers
             Container.Bind<GameStateController>().AsSingle();
             Container.Bind<AudioManager>().AsSingle();
             Container.Bind<SegmentComboManager>().AsSingle();
+            Container.Bind<LevelFinisherSpawner>().AsSingle();
         }
     }
 }
