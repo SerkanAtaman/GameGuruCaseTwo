@@ -3,6 +3,7 @@ using Zenject;
 using GameGuruCaseTwo.Systems.EventSystem;
 using GameGuruCaseTwo.Entities.SliceSystem;
 using GameGuruCaseTwo.Entities.Platform;
+using GameGuruCaseTwo.Systems.GameSystem;
 
 namespace GameGuruCaseTwo.ZenjectInstallers
 {
@@ -18,6 +19,7 @@ namespace GameGuruCaseTwo.ZenjectInstallers
             Container.Bind<EventManager>().AsSingle();
             Container.Bind<PlatformSegmentSlicer>().AsSingle();
             Container.Bind<PlatformHandler>().AsSingle();
+            Container.Bind<GameStateController>().AsSingle();
         }
     }
 }

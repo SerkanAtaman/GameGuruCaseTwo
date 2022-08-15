@@ -17,9 +17,6 @@ namespace GameGuruCaseTwo.UserInterface
         private void Start()
         {
             _homeCanvas.SetActive(true);
-
-            _platformHandler.Init();
-            _platformHandler.StartPlatforming();
         }
 
         public void PlayButton()

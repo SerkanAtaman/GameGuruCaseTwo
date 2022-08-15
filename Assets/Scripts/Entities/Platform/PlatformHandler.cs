@@ -65,7 +65,7 @@ namespace GameGuruCaseTwo.Entities.Platform
 
             CurrentSegment = new PlatformSegment(newSegmentPos, PreviousSegment.ScaleX, _gameAssets);
             //_currentLevelData.RemainingSegmentToSpawn--;
-            //_eventManager.OnPlatformSegmentPlaced?.Invoke(successed);
+            _eventManager.OnPlatformSegmentPlaced?.Invoke(successed);
         }
     }
 }

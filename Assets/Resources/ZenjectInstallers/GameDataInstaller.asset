@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameAssets: {fileID: 11400000, guid: ab6af06bc38e60c4f824b4f58a5b2e2a, type: 2}
   _gameSettings: {fileID: 11400000, guid: f4fbc5bab0f028846b13d26ad7531625, type: 2}
+  _playerSettings: {fileID: 11400000, guid: 6b8f276dd4cc1954685c9d1286076763, type: 2}

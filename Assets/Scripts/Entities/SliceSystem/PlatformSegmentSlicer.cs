@@ -26,14 +26,23 @@ namespace GameGuruCaseTwo.Entities.SliceSystem
             }
             else if (hitPoints.Length == 1)
             {
-                if (hitPoints[0].x > 0)
+                if(hitPoints[0].x < previousSegment.transform.position.x)
+                {
+                    CutSegmentFromLeftSide(segmentToCut, hitPoints);
+                }
+                else if (hitPoints[0].x > previousSegment.transform.position.x)
+                {
+                    CutSegmentFromRightSide(segmentToCut, hitPoints);
+                }
+
+                /*if (hitPoints[0].x > 0)
                 {
                     CutSegmentFromRightSide(segmentToCut, hitPoints);
                 }
                 else if (hitPoints[0].x < 0)
                 {
                     CutSegmentFromLeftSide(segmentToCut, hitPoints);
-                }
+                }*/
             }
             else if (hitPoints.Length == 2)
             {
